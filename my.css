@@ -4,7 +4,6 @@ body {
     height: 100%;
 }
 
-
 body {
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
@@ -173,7 +172,7 @@ header {
     min-height: auto;
     text-align: left;
     color: #fff;
-    background-image: url(header2.jpg);
+    background-image: url(header.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
