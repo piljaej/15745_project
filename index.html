@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>응용프로그래밍 HW4</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css"><!-- 수업시간에 다루었던 bootstrap을 이용하였습니다.-->
+
+    <link rel="stylesheet" href="my.css" type="text/css"><!--각 id별로 색상과 이미지등 디자인 부분을 처리하는 부분입니다.
+    각 태그 영역의 색상변경과 크기조절, body의 header의 배경 이미지를 변경하였습니다 -->
+
+<!--글자의 자동 크기 조절을 위한 template입니다-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+
+<!--
+    <link rel="stylesheet" href="font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="animate.min.css" type="text/css">
+-->
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top"><!--고정된 상단 바를 작업한 부분입니다-->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                  <li>
+                      <a class="page-scroll" href="index.html">Home</a> <!--클릭시 맨 처음 페이지로 오게 됩니다-->
+                  </li>
+
+                    <li>
+                        <a class="page-scroll" href="#page-top">처음으로</a>
+                    </li>
+
+							<audio controls autoplay  loop> <!-- 처음 시작시 자동 반복 재생-->
+							<source src="Developers.mp3" type="audio/mp3">
+							Your browser does not support the audio element.
+							</audio>
+
+                    <li>
+                        <a class="page-scroll" href="#about">숫자 맞추기</a> <!--자바스크립트로 모두 직접 구현 해봤습니다. -->
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="reservation.html">좌석 예매</a><!--프로젝트를 위한 공간입니다 추후에 서버,DB와 연동하여 작업할 계획입니다-->
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!--고정 된 상단 bar 바로 아래 부분의 작업입니다. 하늘색 이미지를 배경으로 하기 위해 my.css 파일을 수정하였습니다.-->
+        <header>
+            <div class="header-content">
+                <div class="header-content-inner">
+                    <h3>안녕하세요</h3>
+                    <h1>장필재의 개인 홈페이지 입니다</h1>
+					<br>
+                    <a href="#about" class="btn btn-primary btn-xl page-scroll">숫자 맞추기</a> <!--누르면 바로 아래에 있는 숫자 맞추기 화면으로 스크롤 되도록 하였습니다-->
+                </div>
+            </div>
+        </header>
+
+<!--header 아래의 부분입니다. 태그 id로 about을 주어 다른 화면으로 부터 스크롤 방식으로 넘어오도록 구현하셨습니다-->
+        <section class="bg-primary" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <h2 class="section-heading">원하는 숫자를 선택해 주세요.<br> 5번의 기회가 주어 집니다.</h2>
+                        <hr class="light">
+<!--table을 이용하여 1~9까지 숫자를 버튼 형식으로 나열 하였습니다.-->
+<!--각 버튼을 누르면 playnumber.js 에 각 버튼 id별로 정의된 함수가 호출되고 각 버튼의 value값들을 playnumber.js 에서 getElementById를 이용하여 받아오고 난수와 비교하고 처리 결과를 html파일로 돌려줍니다.-->
+																		<table class="table table-bordered">
+																			<tr>
+
+																				<td> <a href="#galleryModal7" data-toggle="modal"><input type="button" id="input1" value="1" onClick="button1();" class="btn btn-default btn-xl"></td></a>
+
+																				<td> <a href="#galleryModal7" data-toggle="modal"><input type="button" id="input2" value="2" onClick="button2();" class="btn btn-default btn-xl"></td></a>
+																				<td> <a href="#galleryModal7" data-toggle="modal"><input type="button" id="input3" value="3" onClick="button3(str);" class="btn btn-default btn-xl"></td></a>
+																			</tr>
+
+																			<tr>
+                                        <td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input4" value="4" onClick="button4();" class="btn btn-default btn-xl"></td></a>
+																				<td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input5" value="5" onClick="button5();" class="btn btn-default btn-xl"></td></a>
+																				<td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input6" value="6" onClick="button6();" class="btn btn-default btn-xl"></td></a>
+																			</tr>
+
+																			<tr>
+                                        <td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input7" value="7" onClick="button7();" class="btn btn-default btn-xl"></td></a>
+																				<td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input8" value="8" onClick="button8();" class="btn btn-default btn-xl"></td></a>
+																				<td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input9" value="9" onClick="button9();" class="btn btn-default btn-xl"></td></a>
+																			</tr>
+
+																		</table>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+<!--처음에는 alert()로 구현하려 했으나 alert() 호출시 html 내에서 음악이 끊기는 현상이 발생하고 모양도 이쁘지 않아 따로 팝업창 형식으로 제작 하였습니다.
+aria-hidden="true" 로 설정 함으로써 평소에는 안보이다가 버튼을 클릭하여 토글 발생시 팝업창이 나타나도록 하였습니다.-->
+        <div id="galleryModal7" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-body" style="text-align: center;background-color: #c95050;padding-right: 1px;padding-left: 1px;padding-top: 1px;">
+                        <div class="row">
+                          <div id="text_1" class="col-sm-12">
+                            <h3>
+
+                              <!--아무런 글자를 입력하지 않았지만 playnumber.js 파일에서 sendstr() 함수를 호출하여 이곳에 직접 실행 결과 문자열을 전달하도록 하였습니다.
+                                document.getElementById("text_1").innerHTML = str;
+                              -->
+                              }
+                            </h3><br>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+
+
+
+<!-- 맨 아래 구간입니다. 연락처와 이메일 주소를 적어 연락처를 간다히 기재 하였습니다-->
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">문제 있으시면 연락 주세요!</h2>
+                        <hr class="primary">
+
+                    </div>
+                    <div class="col-lg-4 col-lg-offset-2 text-center">
+                        <p>123-456-6789</p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <p><a href="mailto:your-email@your-domain.com">piljaejang01@hanmail.net</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--동적변화의 제어를 위한 js 파일들입니다-->
+        <!--bootstrap 에서 사용하는 js 파일들입니다-->
+        <script src="jquery.js"></script>
+        <script src="bootstrap.min.js"></script>
+
+
+        <!--부드러운 스코롤 움직임과 동적으로 변하는 text의 위치 조정을 위해 bootstrap 에서 사용하는 js 파일들입니다.-->
+        <script src="jquery.easing.min.js"></script>
+        <script src="jquery.fittext.js"></script>
+
+<!--
+        <script src="wow.min.js"></script>
+-->
+
+        <!--my.css에서 사용하는 js파일입니다-->
+        <script src="my.js"></script>
+
+        <!--숫자 맞추기 게임을 위해 직접 제작한 js 파일입니다-->
+        <script src="playnumber.js"></script>
+	</body>
+</html>
