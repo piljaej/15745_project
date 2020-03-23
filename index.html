@@ -48,7 +48,7 @@
                   </li>
 
                     <li>
-                        <a class="page-scroll" href="#page-top">Download</a>
+                        <a class="page-scroll" href="#about">Download</a>
                     </li>
 
 							<audio controls autoplay  loop> <!-- 처음 시작시 자동 반복 재생-->
@@ -66,10 +66,10 @@
         <header>
             <div class="header-content">
                 <div class="header-content-inner">
-                    <h3>안녕하세요</h3>
-                    <h1>장필재의 개인 홈페이지 입니다</h1>
+                    <h3>Compiler optimization for micro services in Cloud</h3>
+                    <!--   <h1>장필재의 개인 홈페이지 입니다</h1>   -->
 					<br>
-                    <a href="#about" class="btn btn-primary btn-xl page-scroll">Download</a> <!--누르면 바로 아래에 있는 숫자 맞추기 화면으로 스크롤 되도록 하였습니다-->
+                    <a href="#about" class="btn btn-primary btn-xl page-scroll">Download contents</a> <!--누르면 바로 아래에 있는 숫자 맞추기 화면으로 스크롤 되도록 하였습니다-->
                 </div>
             </div>
         </header>
@@ -82,58 +82,13 @@
                         <h2 class="section-heading">원하는 숫자를 선택해 주세요.<br> 5번의 기회가 주어 집니다.</h2>
                         <hr class="light">
 <!--table을 이용하여 1~9까지 숫자를 버튼 형식으로 나열 하였습니다.-->
-<!--각 버튼을 누르면 playnumber.js 에 각 버튼 id별로 정의된 함수가 호출되고 각 버튼의 value값들을 playnumber.js 에서 getElementById를 이용하여 받아오고 난수와 비교하고 처리 결과를 html파일로 돌려줍니다.-->
-																		<table class="table table-bordered">
-																			<tr>
 
-																				<td> <a href="#galleryModal7" data-toggle="modal"><input type="button" id="input1" value="1" onClick="button1();" class="btn btn-default btn-xl"></td></a>
-
-																				<td> <a href="#galleryModal7" data-toggle="modal"><input type="button" id="input2" value="2" onClick="button2();" class="btn btn-default btn-xl"></td></a>
-																				<td> <a href="#galleryModal7" data-toggle="modal"><input type="button" id="input3" value="3" onClick="button3(str);" class="btn btn-default btn-xl"></td></a>
-																			</tr>
-
-																			<tr>
-                                        <td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input4" value="4" onClick="button4();" class="btn btn-default btn-xl"></td></a>
-																				<td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input5" value="5" onClick="button5();" class="btn btn-default btn-xl"></td></a>
-																				<td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input6" value="6" onClick="button6();" class="btn btn-default btn-xl"></td></a>
-																			</tr>
-
-																			<tr>
-                                        <td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input7" value="7" onClick="button7();" class="btn btn-default btn-xl"></td></a>
-																				<td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input8" value="8" onClick="button8();" class="btn btn-default btn-xl"></td></a>
-																				<td><a href="#galleryModal7" data-toggle="modal"> <input type="button" id="input9" value="9" onClick="button9();" class="btn btn-default btn-xl"></td></a>
-																			</tr>
-
-																		</table>
 
                     </div>
                 </div>
             </div>
         </section>
 
-
-
-<!--처음에는 alert()로 구현하려 했으나 alert() 호출시 html 내에서 음악이 끊기는 현상이 발생하고 모양도 이쁘지 않아 따로 팝업창 형식으로 제작 하였습니다.
-aria-hidden="true" 로 설정 함으로써 평소에는 안보이다가 버튼을 클릭하여 토글 발생시 팝업창이 나타나도록 하였습니다.-->
-        <div id="galleryModal7" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-body" style="text-align: center;background-color: #c95050;padding-right: 1px;padding-left: 1px;padding-top: 1px;">
-                        <div class="row">
-                          <div id="text_1" class="col-sm-12">
-                            <h3>
-
-                              <!--아무런 글자를 입력하지 않았지만 playnumber.js 파일에서 sendstr() 함수를 호출하여 이곳에 직접 실행 결과 문자열을 전달하도록 하였습니다.
-                                document.getElementById("text_1").innerHTML = str;
-                              -->
-                              }
-                            </h3><br>
-                          </div>
-                        </div>
-                      </div>
-                      </div>
-                      </div>
-                      </div>
 
 
 
